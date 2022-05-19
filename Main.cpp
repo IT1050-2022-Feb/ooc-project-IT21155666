@@ -16,7 +16,7 @@ int main(){
 	Admin02->displayAdminDetails();
   
   //Creating dynamic objects 
-  Management_Assistant *MA01 = new Management_Assistant("MA0001","Kasun.MA@gmail","MA@#$987");
+  	Management_Assistant *MA01 = new Management_Assistant("MA0001","Kasun.MA@gmail","MA@#$987");
 	Management_Assistant *MA02 = new Management_Assistant("MA0002","shehan.MA@gmail","MA@#$654");
 	
 	cout<<"--------Management_Assistant Details--------"<<endl<<endl; //prompt
