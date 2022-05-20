@@ -87,13 +87,10 @@ cout<<"-----Unregistered Guset User----- " <<endl<<endl;
 	P4->displayPaymentDetails();
 	P5->displayPaymentDetails();
 	
-  return 0; //return statement
-	
-}
+
 
 //IT20657314 - R.sujeevan- MLB_07.01.11
 //main.cpp
-
 
 //Include Bus.cpp & Report.cpp with headers
 
@@ -119,15 +116,10 @@ cout<<"-----Unregistered Guset User----- " <<endl<<endl;
 
 //IT21157578- A H S Dilsara- MLB_07.01.11
 //main.cpp
-#include <iostream>
-#include <string>
+
+
 
 //Include feedback.cpp & customer care officer.cpp with headers
-#include "feedback.cpp"
-#include "customer care officer.cpp"
-
-using namespace std;
-
 
 
   //-----Creating dynamic feedback objects--------------------
