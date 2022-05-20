@@ -90,8 +90,6 @@ cout<<"-----Unregistered Guset User----- " <<endl<<endl;
 
 
 //IT20657314 - R.sujeevan- MLB_07.01.11
-//main.cpp
-
 //Include Bus.cpp & Report.cpp with headers
 
   //-----Creating dynamic bus objects--------------------
@@ -115,12 +113,7 @@ cout<<"-----Unregistered Guset User----- " <<endl<<endl;
  
 
 //IT21157578- A H S Dilsara- MLB_07.01.11
-//main.cpp
-
-
-
 //Include feedback.cpp & customer care officer.cpp with headers
-
 
   //-----Creating dynamic feedback objects--------------------
   feedback* feedback1  = newfeedback("feedback001", "feedback@34556", "feedback@##001");
@@ -139,13 +132,12 @@ cout<<"-----Unregistered Guset User----- " <<endl<<endl;
 
   //-----Example method callings of  CustomerCare_Officer object-----------
   
-
-   
-    strstaffId = staffId();
+  strstaffId = staffId();
 	strEmail = email();
 	strPassword = password(); 
 
   cout << "Main file finished.\n";
+  
   return 0;
   
 }
