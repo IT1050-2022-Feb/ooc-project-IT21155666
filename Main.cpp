@@ -25,11 +25,12 @@ int main(){
 	MA02->displayMADetails();
 	
 
-  //IT21156724 - W.G.P.Shehani - MLB_07.01.11
+//IT21156724 - W.G.P.Shehani - MLB_07.01.11
+//Creating static objects
 cout<<"-----Unregistered Guset User----- " <<endl<<endl;
 	
 	Unregisterd_Guset_User UU1("Dhanuka", "938855666V", "Matara", "0702222222", "dhanu2010@gmail.com", "1993/11/25");
-    UU1.displayUnregiserdDetails();
+    UU1.displayUnregiserdDetails(){}
 	
 	Unregisterd_Guset_User UU2("Shehani", "949998885V", "Galle", "0777777777", "shenu94@gmail.com", "1994/02/02");
     UU2.displayUnregiserdDetails();
@@ -42,8 +43,10 @@ cout<<"-----Unregistered Guset User----- " <<endl<<endl;
     
     Unregisterd_Guset_User UU5("Isuru", "923222222V", "Rathnapura", "0762225522", "isure@yahoo.com", "1992/11/19");
     UU5.displayUnregiserdDetails();
+  
 
 //IT21156724 - W.G.P.Shehani - MLB_07.01.11
+//Creating static objects
   	cout<<"----------Registered User---------- " <<endl<<endl;
 		
 	Registerd_User RU1("RU001", "nethu@email.com", "*8888*");
@@ -60,8 +63,10 @@ cout<<"-----Unregistered Guset User----- " <<endl<<endl;
     		
 	Registerd_User RU5("RU005", "shehana99@email.com", "iii**uuu");
     RU5.diaplayRegisterdDetails();
+  
     
 //IT21156724 - W.G.P.Shehani - MLB_07.01.11
+//Creating dynamic objects
   cout<<"-----Payment----- " <<endl<<endl;
 	
 	Payment * P1 = new Payment("P11111", "Debit Card", "RU001", "2022/04/21", "Rs:3000");
@@ -82,6 +87,41 @@ cout<<"-----Unregistered Guset User----- " <<endl<<endl;
 	P4->displayPaymentDetails();
 	P5->displayPaymentDetails();
 	
-``return 0; //return statement
+  return 0; //return statement
 	
+}
+
+//IT20657314 - R.sujeevan- MLB_07.01.11
+//main.cpp
+#include <iostream>
+#include <string>
+
+//Include Bus.cpp & Report.cpp with headers
+#include "Bus.cpp"
+#include "Report.cpp"
+
+using namespace std;
+
+int main() {
+
+  //-----Creating dynamic bus objects--------------------
+  Bus* bus1 = new Bus("BUS001", "BUSCAT001", "BUSRT001");
+  Bus* bus2 = new Bus("BUS002", "BUSCAT002", "BUSRT002");
+
+  //-----Example method callings of bus object-----------
+  bus1->storeBusDetails();
+  bus2->addBusSchedules();
+  bus1->viewBusDetails();
+  
+  //-----Creating dynamic report objects-------------------------
+  Report* bookingReport = new Report("REP001", "REPTYPEBOOKING");
+  Report* systemReport = new Report("REP002", "REPTYPESYSTEM");
+
+  //-----Example method callings of bus object-----------
+  bookingReport->viewBookingReservationReport();
+  systemReport->viewSystemReport();
+
+  cout << "Main file finished.\n";
+  return 0;
+  
 }
