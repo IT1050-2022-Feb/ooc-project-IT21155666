@@ -125,3 +125,44 @@ int main() {
   return 0;
   
 }
+
+//IT21157578- A H S Dilsara- MLB_07.01.11
+//main.cpp
+#include <iostream>
+#include <string>
+
+//Include feedback.cpp & customer care officer.cpp with headers
+#include "feedback.cpp"
+#include "customer care officer.cpp"
+
+using namespace std;
+
+int main() {
+
+  //-----Creating dynamic feedback objects--------------------
+  feedback* feedback1  = newfeedback("feedback001", "feedback@34556", "feedback@##001");
+  feedback* feedback2  = newfeedback("feedback002", "feedback@867565", "feedback@##002");
+  
+  
+
+  //-----Example method callings of feedback object-----------
+  feedback1->storeFeedbackId();
+  feedback2->addFeedbackDescription();
+  feedback3->viewUserId();
+  
+  //-----Creating dynamic CustomerCare_Officer  objects-------------------------
+  CustomerCare_Officer* updateUserDetails= newdetails("CEP001","updateUserDetails");
+  CustomerCare_Officer* maintainInquiries = newinquiries("CEP002", "maintainInquiries");
+
+  //-----Example method callings of  CustomerCare_Officer object-----------
+  
+
+   
+    strstaffId = staffId();
+	strEmail = email();
+	strPassword = password(); 
+
+  cout << "Main file finished.\n";
+  return 0;
+  
+}
