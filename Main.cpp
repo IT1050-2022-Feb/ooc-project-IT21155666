@@ -25,11 +25,14 @@ int main(){
 	MA02->displayMADetails();
 	
 
-  //IT21156724 - W.G.P.Shehani - MLB_07.01.11
-	cout<<"-----Unregistered Guset User----- " <<endl<<endl;
+
+//IT21156724 - W.G.P.Shehani - MLB_07.01.11
+//Creating static objects
+cout<<"-----Unregistered Guset User----- " <<endl<<endl;
 	
 	Unregisterd_Guset_User UU1("Dhanuka", "938855666V", "Matara", "0702222222", "dhanu2010@gmail.com", "1993/11/25");
-  	UU1.displayUnregiserdDetails();
+    UU1.displayUnregiserdDetails(){}
+
 	
 	Unregisterd_Guset_User UU2("Shehani", "949998885V", "Galle", "0777777777", "shenu94@gmail.com", "1994/02/02");
   	UU2.displayUnregiserdDetails();
@@ -40,10 +43,14 @@ int main(){
     	Unregisterd_Guset_User UU4("Sadew", "199952541V", "Malabe", "0715556624", "sadew@gmail.com", "1999/11/04");
     	UU4.displayUnregiserdDetails();
     
-   	Unregisterd_Guset_User UU5("Isuru", "923222222V", "Rathnapura", "0762225522", "isure@yahoo.com", "1992/11/19");
-   	UU5.displayUnregiserdDetails();
+
+    Unregisterd_Guset_User UU5("Isuru", "923222222V", "Rathnapura", "0762225522", "isure@yahoo.com", "1992/11/19");
+    UU5.displayUnregiserdDetails();
+  
+
 
 //IT21156724 - W.G.P.Shehani - MLB_07.01.11
+//Creating static objects
   	cout<<"----------Registered User---------- " <<endl<<endl;
 		
 	Registerd_User RU1("RU001", "nethu@email.com", "*8888*");
@@ -59,10 +66,14 @@ int main(){
     	RU4.diaplayRegisterdDetails();
     		
 	Registerd_User RU5("RU005", "shehana99@email.com", "iii**uuu");
-    	RU5.diaplayRegisterdDetails();
+
+    RU5.diaplayRegisterdDetails();
+  
     
 //IT21156724 - W.G.P.Shehani - MLB_07.01.11
-  	cout<<"-----Payment----- " <<endl<<endl;
+//Creating dynamic objects
+  cout<<"-----Payment----- " <<endl<<endl;
+
 	
 	Payment * P1 = new Payment("P11111", "Debit Card", "RU001", "2022/04/21", "Rs:3000");
 	
@@ -81,7 +92,81 @@ int main(){
 	P3->displayPaymentDetails();
 	P4->displayPaymentDetails();
 	P5->displayPaymentDetails();
+
+
+
+//IT20657314 - R.sujeevan- MLB_07.01.11
+//Include Bus.cpp & Report.cpp with headers
+
+  //-----Creating dynamic bus objects--------------------
+  Bus* bus1 = new Bus("BUS001", "BUSCAT001", "BUSRT001");
+  Bus* bus2 = new Bus("BUS002", "BUSCAT002", "BUSRT002");
+
+  //-----Example method callings of bus object-----------
+  bus1->storeBusDetails();
+  bus2->addBusSchedules();
+  bus1->viewBusDetails();
+  
+  //-----Creating dynamic report objects-------------------------
+  Report* bookingReport = new Report("REP001", "REPTYPEBOOKING");
+  Report* systemReport = new Report("REP002", "REPTYPESYSTEM");
+
+  //-----Example method callings of bus object-----------
+  bookingReport->viewBookingReservationReport();
+  systemReport->viewSystemReport();
+
+  cout << "Main file finished.\n";
+ 
+
+//IT21157578- A H S Dilsara- MLB_07.01.11
+//Include feedback.cpp & customer care officer.cpp with headers
+
+  //-----Creating dynamic feedback objects--------------------
+  feedback* feedback1  = newfeedback("feedback001", "feedback@34556", "feedback@##001");
+  feedback* feedback2  = newfeedback("feedback002", "feedback@867565", "feedback@##002");
+  
+  
+
+  //-----Example method callings of feedback object-----------
+  feedback1->storeFeedbackId();
+  feedback2->addFeedbackDescription();
+  feedback3->viewUserId();
+  
+  //-----Creating dynamic CustomerCare_Officer  objects-------------------------
+  CustomerCare_Officer* updateUserDetails= newdetails("CEP001","updateUserDetails");
+  CustomerCare_Officer* maintainInquiries = newinquiries("CEP002", "maintainInquiries");
+
+  //-----Example method callings of  CustomerCare_Officer object-----------
+  
+  strstaffId = staffId();
+	strEmail = email();
+	strPassword = password(); 
+
+  cout << "Main file finished.\n";
+
+  
+//S.S.Withanachchi-IT21156588 MLB_07.01M
+//main.cpp
+
+	cout<<"Ticket Details"<<endl;
 	
-	return 0; //return statement
+	Ticket *Ticket01 = new Ticket("AD001","A1","2022-05-20","100");
+	Ticket *Ticket02 = new Ticket("AD002""A2","2022-06-20","150");
+	
+	Ticket01->recieveTicketNumber();
+	Ticket02->displayTicketDetails();
+	
+	cout<<"Bus Reservation Details"<<endl;
+	
+	BusReservation * BR01 = new BusReservation("B001","BID001","Lakshan","2022-05-20","100"); 
+	BusReservation * BR02 = new BusReservation("B002","BID002","Ashen","2022-06-20","150");
+	
+	BR01->checkBusAvailability();
+	BR02->enterPassengerDetails();
+	BR03->confirmReservation();
+	BR04->cancelBooking();
+	
+	return 0;	
+
 	
 }
