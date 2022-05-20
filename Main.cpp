@@ -137,7 +137,29 @@ cout<<"-----Unregistered Guset User----- " <<endl<<endl;
 	strPassword = password(); 
 
   cout << "Main file finished.\n";
+
   
-  return 0;
-  
+//S.S.Withanachchi-IT21156588 MLB_07.01M
+//main.cpp
+
+	cout<<"Ticket Details"<<endl;
+	
+	Ticket *Ticket01 = new Ticket("AD001","A1","2022-05-20","100");
+	Ticket *Ticket02 = new Ticket("AD002""A2","2022-06-20","150");
+	
+	Ticket01->recieveTicketNumber();
+	Ticket02->displayTicketDetails();
+	
+	cout<<"Bus Reservation Details"<<endl;
+	
+	BusReservation * BR01 = new BusReservation("B001","BID001","Lakshan","2022-05-20","100"); 
+	BusReservation * BR02 = new BusReservation("B002","BID002","Ashen","2022-06-20","150");
+	
+	BR01->checkBusAvailability();
+	BR02->enterPassengerDetails();
+	BR03->confirmReservation();
+	BR04->cancelBooking();
+	
+	return 0;	
+	
 }
