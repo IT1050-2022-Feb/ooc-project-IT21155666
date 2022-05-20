@@ -93,16 +93,9 @@ cout<<"-----Unregistered Guset User----- " <<endl<<endl;
 
 //IT20657314 - R.sujeevan- MLB_07.01.11
 //main.cpp
-#include <iostream>
-#include <string>
+
 
 //Include Bus.cpp & Report.cpp with headers
-#include "Bus.cpp"
-#include "Report.cpp"
-
-using namespace std;
-
-int main() {
 
   //-----Creating dynamic bus objects--------------------
   Bus* bus1 = new Bus("BUS001", "BUSCAT001", "BUSRT001");
@@ -122,9 +115,7 @@ int main() {
   systemReport->viewSystemReport();
 
   cout << "Main file finished.\n";
-  return 0;
-  
-}
+ 
 
 //IT21157578- A H S Dilsara- MLB_07.01.11
 //main.cpp
@@ -137,7 +128,7 @@ int main() {
 
 using namespace std;
 
-int main() {
+
 
   //-----Creating dynamic feedback objects--------------------
   feedback* feedback1  = newfeedback("feedback001", "feedback@34556", "feedback@##001");
